@@ -1,0 +1,11 @@
+version: "2"
+services:
+  dtdd-backend:
+    build: .
+    container_name: "dtdd-backend"
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+    ports:
+      - "8080:8080"
+#    volumes:
+#      - ./payment-api/config/:/var/config/
