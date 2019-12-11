@@ -9,4 +9,5 @@ public interface PhoneRepository extends JpaRepository<Phone, Long> {
 
     @Query("select t from phone t where t.id = :id")
     Phone findPhoneById(@Param("id") Long id);
+
 }
