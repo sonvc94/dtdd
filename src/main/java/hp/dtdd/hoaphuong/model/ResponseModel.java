@@ -8,10 +8,16 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 @NoArgsConstructor
-@AllArgsConstructor
+//@AllArgsConstructor
 public class ResponseModel {
     private Meta meta;
     private Object data;
+
+
+    public ResponseModel(Meta meta, Object data){
+        this.meta = meta;
+        this.data = data;
+    }
 
     public static ResponseModel success(Object data){
         Meta meta = Meta.builder()
